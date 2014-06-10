@@ -1,0 +1,2 @@
+java ObscurerCLI
+pause
