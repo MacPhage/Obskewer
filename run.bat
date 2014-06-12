@@ -1,2 +1,0 @@
-java ObscurerGUI
-pause

@@ -1,1 +1,1 @@
-jar cfm Obskewer.jar Manifest.txt Obskewer.class
+jar cfm Obskewer.jar Manifest.txt Obskewer.class Algorithms/*.class

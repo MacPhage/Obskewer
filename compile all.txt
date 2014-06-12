@@ -1,0 +1,5 @@
+cd ~/Documents/Git/Obskewer/
+cd Algorithms
+javac ClassicShift.java
+cd -
+javac Obskewer.java
