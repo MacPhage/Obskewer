@@ -15,7 +15,7 @@
 
 package Algorithms;
 
-public class OtherCipher
+public class Numbers
 {
   /* Name of Cipher
   // Description of cipher.
@@ -30,12 +30,10 @@ public class OtherCipher
   }
   public static String encode(String a, int inc) //Custom parameters
   {
-    //Necessary calculations
     return a;
   }
   public static String decode(String a, int inc) //Custom parameters
   {
-    //Necessary calculations
     return a;
   }
 }

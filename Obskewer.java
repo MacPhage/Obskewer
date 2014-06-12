@@ -17,6 +17,7 @@ import java.awt.*;
 import javax.swing.*;
 import Algorithms.ClassicShift;
 import Algorithms.TrueCaesar;
+import Algorithms.Morse;
 
 public class Obskewer
 {
@@ -43,7 +44,9 @@ public class Obskewer
       }
       else if(operation.equals("quit"))
       {
-        System.exit(0);
+        break;
+        //Commented out because it could close every other Java program
+        //System.exit(0);
       }
       else
       {
@@ -54,7 +57,7 @@ public class Obskewer
   public static void doEncode()
   {
     String in = JOptionPane.showInputDialog(null,"Encoding to a Cipher...\n"+
-    "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'(none)\'\nType your cipher type of choice: ",
+    "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'Morse\', \'(none)\'\nType your cipher type of choice: ",
     "ClassicShift");
     if(in.equals("ClassicShift"))
     {
@@ -65,11 +68,11 @@ public class Obskewer
     {
       TrueCaesar.performEncode();
     }
-    /*
-    else if(in.equals("OtherCipher"))
+    else if(in.equals("Morse"))
     {
-      OtherCipher.performEncode();
+      Morse.performEncode();
     }
+    /*
     else if(in.equals("OtherCipher"))
     {
       OtherCipher.performEncode();
@@ -87,7 +90,7 @@ public class Obskewer
   public static void doDecode()
   {
     String in = JOptionPane.showInputDialog(null,"Decoding from a Cipher...\n"+
-    "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'(none)\'\nType your cipher type of choice: ",
+    "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'Morse\', \'(none)\'\nType your cipher type of choice: ",
     "ClassicShift");
     if(in.equals("ClassicShift"))
     {
@@ -97,11 +100,12 @@ public class Obskewer
     {
       TrueCaesar.performDecode();
     }
-    /*
-    else if(in.equals("OtherCipher"))
+
+    else if(in.equals("Morse"))
     {
-      OtherCipher.performEncode();
+      Morse.performDecode();
     }
+    /*
     else if(in.equals("OtherCipher"))
     {
       OtherCipher.performEncode();
@@ -126,7 +130,7 @@ public class Obskewer
     "Author: Austin Jackson\n"+
     "Official website: http://srchub.org/p/obskewer\n"+
     "Some Java implementations of the algorithms are not coded by the author\n"+
-    "of this program. Please view the Credits on the offcial website for the"+
+    "of this program. Please view the Credits on the offcial website for the "+
     "original authors.",
     "About Obskewer",JOptionPane.INFORMATION_MESSAGE);
   }
