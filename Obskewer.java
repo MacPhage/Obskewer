@@ -16,6 +16,7 @@
 import java.awt.*;
 import javax.swing.*;
 import Algorithms.ClassicShift;
+import Algorithms.TrueCaesar;
 
 public class Obskewer
 {
@@ -53,17 +54,18 @@ public class Obskewer
   public static void doEncode()
   {
     String in = JOptionPane.showInputDialog(null,"Encoding to a Cipher...\n"+
-    "Ciphers: \'ClassicShift\', \'(none)\'\nType your cipher type of choice: ",
+    "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'(none)\'\nType your cipher type of choice: ",
     "ClassicShift");
     if(in.equals("ClassicShift"))
     {
       ClassicShift.performEncode();
     }
-    /*
-    else if(in.equals("OtherCipher"))
+
+    else if(in.equals("TrueCaesar"))
     {
-      OtherCipher.performEncode();
+      TrueCaesar.performEncode();
     }
+    /*
     else if(in.equals("OtherCipher"))
     {
       OtherCipher.performEncode();
@@ -85,17 +87,17 @@ public class Obskewer
   public static void doDecode()
   {
     String in = JOptionPane.showInputDialog(null,"Decoding from a Cipher...\n"+
-    "Ciphers: \'ClassicShift\', \'(none)\'\nType your cipher type of choice: ",
+    "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'(none)\'\nType your cipher type of choice: ",
     "ClassicShift");
     if(in.equals("ClassicShift"))
     {
       ClassicShift.performDecode();
     }
-    /*
-    else if(in.equals("OtherCipher"))
+    else if(in.equals("TrueCaesar"))
     {
-      OtherCipher.performEncode();
+      TrueCaesar.performDecode();
     }
+    /*
     else if(in.equals("OtherCipher"))
     {
       OtherCipher.performEncode();
@@ -122,7 +124,10 @@ public class Obskewer
     "\n"+
     "Version: "+version+"\n"+
     "Author: Austin Jackson\n"+
-    "Official website: http://srchub.org/p/obskewer\n",
+    "Official website: http://srchub.org/p/obskewer\n"+
+    "Some Java implementations of the algorithms are not coded by the author\n"+
+    "of this program. Please view the Credits on the offcial website for the"+
+    "original authors.",
     "About Obskewer",JOptionPane.INFORMATION_MESSAGE);
   }
 }
