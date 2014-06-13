@@ -22,9 +22,6 @@ public class TrueCaesar
   /* True Caesar
   // The true form of Caesar's Cipher
   */
-
-  static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
   public static void performEncode()
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to encode: ","Julius Caesar rocks!");
@@ -53,6 +50,6 @@ public class TrueCaesar
 			}
 		}
     String result = encoded.toString();
-		return result.toUpperCase();
+		return result.toLowerCase();
 	}
 }

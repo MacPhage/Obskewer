@@ -33,7 +33,7 @@ public class Morse
     String in = JOptionPane.showInputDialog(null,"Enter something to decode: ","... .- -- ..- . .-.. / -- --- .-. ... . ");
     String n = JOptionPane.showInputDialog("Encoded: \'"+in+"\'\nDecoded: ",decode(in));
   }
-  public static String encode(String a) //Custom parameters
+  public static String encode(String a)
   {
     String r = ""; //Result
     int e = 0; //Count of unrecognized characters

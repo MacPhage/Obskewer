@@ -24,7 +24,7 @@ public class Obskewer
   static String titleText = "Obskewer";
   static String version = "1.2.1, last updated June 13, 2014";
   static String changes = "- Added TrueCaesar cipher support\n"+
-  "- Added Morse code cipher support"+
+  "- Added Morse code cipher support\n"+
   "Patch #1:\n- Fixed repeated messages of invalid characters in Morse code";
 
   public static void main(String args[])
