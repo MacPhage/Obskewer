@@ -271,11 +271,11 @@ public class Morse
         e++;
         r += (c+" ");
       }
-      if(e > 0)
-      {
-        JOptionPane.showMessageDialog(null,e+" characters weren\'t recognized. They "+
-        "are kept the same in their unencoded form","Obskewer",JOptionPane.WARNING_MESSAGE);
-      }
+    }
+    if(e > 0)
+    {
+      JOptionPane.showMessageDialog(null,e+" character(s) weren\'t recognized. They "+
+      "are kept the same in their unencoded form","Obskewer",JOptionPane.WARNING_MESSAGE);
     }
     return r;
   }
@@ -528,11 +528,11 @@ public class Morse
         e++;
         r += b[i]; //Unrecognized Morse "letters/phrases" will appear in their Morse form when translated
       }
-      if(e > 0)
-      {
-        JOptionPane.showMessageDialog(null,e+" Morse \"letters\" weren\'t recognized. They "+
-        "are kept the same in their encoded form","Obskewer",JOptionPane.WARNING_MESSAGE);
-      }
+    }
+    if(e > 0)
+    {
+      JOptionPane.showMessageDialog(null,e+" Morse \"letter(s)\" weren\'t recognized. They "+
+      "are kept the same in their encoded form","Obskewer",JOptionPane.WARNING_MESSAGE);
     }
     return r;
   }
