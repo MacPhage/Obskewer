@@ -1,1 +1,0 @@
-jar cfm ../bin/Obskewer.jar Manifest.txt Obskewer.class Algorithms/*.class

@@ -1,2 +1,0 @@
-java src/Obskewer
-pause
