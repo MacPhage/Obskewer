@@ -22,7 +22,10 @@ import Algorithms.Morse;
 public class Obskewer
 {
   static String titleText = "Obskewer";
-  static String version = "1.1.0, last updated June 11, 2014";
+  static String version = "1.2.0, last updated June 12, 2014";
+  static String changes = "- Added TrueCaesar cipher support\n"+
+  "- Added Morse code cipher support";
+
   public static void main(String args[])
   {
     String operation;
@@ -58,7 +61,7 @@ public class Obskewer
   {
     String in = JOptionPane.showInputDialog(null,"Encoding to a Cipher...\n"+
     "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'Morse\', \'(none)\'\nType your cipher type of choice: ",
-    "ClassicShift");
+    "TrueCaesar");
     if(in.equals("ClassicShift"))
     {
       ClassicShift.performEncode();
@@ -84,14 +87,14 @@ public class Obskewer
     */
     else
     {
-      JOptionPane.showMessageDialog(null,"That wasn\'t a valid cipher.",titleText,JOptionPane.WARNING_MESSAGE);
+      JOptionPane.showMessageDialog(null,"That isn\'t a supported cipher.",titleText,JOptionPane.WARNING_MESSAGE);
     }
   }
   public static void doDecode()
   {
     String in = JOptionPane.showInputDialog(null,"Decoding from a Cipher...\n"+
     "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'Morse\', \'(none)\'\nType your cipher type of choice: ",
-    "ClassicShift");
+    "TrueCaesar");
     if(in.equals("ClassicShift"))
     {
       ClassicShift.performDecode();
@@ -117,7 +120,7 @@ public class Obskewer
     */
     else
     {
-      JOptionPane.showMessageDialog(null,"That wasn\'t a valid cipher.",titleText,JOptionPane.WARNING_MESSAGE);
+      JOptionPane.showMessageDialog(null,"That isn\'t a supported cipher.",titleText,JOptionPane.WARNING_MESSAGE);
     }
   }
   public static void showInfo()
@@ -131,7 +134,8 @@ public class Obskewer
     "Official website: http://srchub.org/p/obskewer\n"+
     "Some Java implementations of the algorithms are not coded by the author\n"+
     "of this program. Please view the Credits on the offcial website for the "+
-    "original authors.",
+    "original authors.\n\n"+
+    "Changes in this version: \n"+changes,
     "About Obskewer",JOptionPane.INFORMATION_MESSAGE);
   }
 }

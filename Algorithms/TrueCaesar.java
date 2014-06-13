@@ -28,13 +28,13 @@ public class TrueCaesar
   public static void performEncode()
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to encode: ","Julius Caesar rocks!");
-    int key = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter a key bewteen 0 and 25: ","2"));
+    int key = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter a key bewteen 0 and 25: ","4"));
     String n = JOptionPane.showInputDialog("Key (remember this!): \'"+key+"\'\nOriginal: \'"+in+"\'\nEncoded: ",encode(in,key));
   }
   public static void performDecode()
   {
-    String in = JOptionPane.showInputDialog(null,"Enter something to decode: ","O{\"Lwnkwu Ecguct tqemu!");
-    int key = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter a key bewteen 0 and 25: ","2"));
+    String in = JOptionPane.showInputDialog(null,"Enter something to decode: ","NYPMYW GEIWEV VSGOW!");
+    int key = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter a key bewteen 0 and 25: ","4"));
     String n = JOptionPane.showInputDialog("Input Key: \'"+key+"\'\nEncoded: \'"+in+"\'\nDecoded: ",decode(in,key));
   }
   public static String decode(String enc, int offset) {
@@ -52,6 +52,7 @@ public class TrueCaesar
 				encoded.append(i);
 			}
 		}
-		return encoded.toString();
+    String result = encoded.toString();
+		return result.toUpperCase();
 	}
 }
