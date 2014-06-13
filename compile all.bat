@@ -1,5 +1,5 @@
 set path=%path%;C:\Program Files (x86)\Java\jdk1.7.0_51\bin
-cd Algorithms
+cd src/Algorithms
 javac ClassicShift.java
 javac TrueCaesar.java
 javac Morse.java

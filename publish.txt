@@ -1,4 +1,4 @@
-cd ~/Documents/Git/Obskewer/
+cd ~/Documents/Git/Obskewer/src/
 cd Algorithms
 javac ClassicShift.java
 javac TrueCaesar.java
@@ -7,4 +7,4 @@ javac Numbers.java
 javac Skip.java
 cd -
 javac Obskewer.java
-jar cfm Obskewer.jar Manifest.txt Obskewer.class Algorithms/*.class
+jar cfm ../bin/Obskewer.jar Manifest.txt Obskewer.class Algorithms/*.class

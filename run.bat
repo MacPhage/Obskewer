@@ -1,2 +1,2 @@
-java Obskewer
+java src/Obskewer
 pause

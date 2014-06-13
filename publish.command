@@ -7,3 +7,4 @@ javac Numbers.java
 javac Skip.java
 cd -
 javac Obskewer.java
+jar cfm ../bin/Obskewer-snapshot.jar Manifest.txt Obskewer.class Algorithms/*.class
