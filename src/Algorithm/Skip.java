@@ -13,9 +13,9 @@
 //  http://srchub.org/u/mac
 //
 
-package Algorithms;
+package Algorithm;
 
-public class OtherCipher
+public class Skip
 {
   /* Name of Cipher
   // Description of cipher.
@@ -30,12 +30,10 @@ public class OtherCipher
   }
   public static String encode(String a, int inc) //Custom parameters
   {
-    //Necessary calculations
     return a;
   }
   public static String decode(String a, int inc) //Custom parameters
   {
-    //Necessary calculations
     return a;
   }
 }

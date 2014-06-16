@@ -13,7 +13,7 @@
 //  http://srchub.org/u/mac
 //
 
-package Algorithms;
+package Algorithm;
 
 public class Bifid
 {

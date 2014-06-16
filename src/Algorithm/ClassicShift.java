@@ -13,7 +13,7 @@
 //  http://srchub.org/u/mac
 //
 
-package Algorithms;
+package Algorithm;
 
 import javax.swing.*;
 
@@ -26,13 +26,13 @@ public class ClassicShift
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to encode: ","My secrets!");
     int key = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter a short-integer key: ","2"));
-    String n = JOptionPane.showInputDialog("Key (remember this!): \'"+key+"\'\nOriginal: \'"+in+"\'\nEncoded: ",encode(in,key));
+    String out = JOptionPane.showInputDialog("Key (remember this!): \'"+key+"\'\nOriginal: \'"+in+"\'\nEncoded: ",encode(in,key));
   }
   public static void performDecode()
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to decode: ","O{\"ugetgvu#");
     int key = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter a short-integer key: ","2"));
-    String n = JOptionPane.showInputDialog("Input Key: \'"+key+"\'\nEncoded: \'"+in+"\'\nDecoded: ",decode(in,key));
+    String out = JOptionPane.showInputDialog("Input Key: \'"+key+"\'\nEncoded: \'"+in+"\'\nDecoded: ",decode(in,key));
   }
   public static String encode(String a, int inc)
   {

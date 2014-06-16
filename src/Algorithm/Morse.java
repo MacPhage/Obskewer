@@ -1,5 +1,5 @@
 //
-//  OtherCipher.java
+//  Morse.java
 //
 //  Java Source File
 //
@@ -13,7 +13,7 @@
 //  http://srchub.org/u/mac
 //
 
-package Algorithms;
+package Algorithm;
 
 import javax.swing.*;
 
@@ -26,12 +26,12 @@ public class Morse
   public static void performEncode()
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to encode: ","Samuel Morse");
-    String n = JOptionPane.showInputDialog("Original: \'"+in+"\'\nEncoded: ",encode(in));
+    String out = JOptionPane.showInputDialog("Original: \'"+in+"\'\nEncoded: ",encode(in));
   }
   public static void performDecode()
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to decode: ","... .- -- ..- . .-.. / -- --- .-. ... . ");
-    String n = JOptionPane.showInputDialog("Encoded: \'"+in+"\'\nDecoded: ",decode(in));
+    String out = JOptionPane.showInputDialog("Encoded: \'"+in+"\'\nDecoded: ",decode(in));
   }
   public static String encode(String a)
   {

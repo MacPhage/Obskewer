@@ -13,7 +13,7 @@
 //  http://srchub.org/u/mac
 //
 
-package Algorithms;
+package Algorithm;
 
 import javax.swing.*;
 
@@ -26,13 +26,13 @@ public class TrueCaesar
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to encode: ","Julius Caesar rocks!");
     int key = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter a key bewteen 0 and 25: ","4"));
-    String n = JOptionPane.showInputDialog("Key (remember this!): \'"+key+"\'\nOriginal: \'"+in+"\'\nEncoded: ",encode(in,key));
+    String out = JOptionPane.showInputDialog("Key (remember this!): \'"+key+"\'\nOriginal: \'"+in+"\'\nEncoded: ",encode(in,key));
   }
   public static void performDecode()
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to decode: ","NYPMYW GEIWEV VSGOW!");
     int key = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter a key bewteen 0 and 25: ","4"));
-    String n = JOptionPane.showInputDialog("Input Key: \'"+key+"\'\nEncoded: \'"+in+"\'\nDecoded: ",decode(in,key));
+    String out = JOptionPane.showInputDialog("Input Key: \'"+key+"\'\nEncoded: \'"+in+"\'\nDecoded: ",decode(in,key));
   }
   public static String decode(String enc, int offset) {
 		return encode(enc, -offset);

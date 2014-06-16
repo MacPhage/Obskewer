@@ -15,23 +15,38 @@
 
 import java.awt.*;
 import javax.swing.*;
-import Algorithms.ClassicShift;
-import Algorithms.TrueCaesar;
-import Algorithms.Morse;
+
+import Algorithm.Misc;
+import Algorithm.Debug;
+
+import Algorithm.ClassicShift;
+import Algorithm.TrueCaesar;
+import Algorithm.Morse;
+import Algorithm.Numbers;
+
 
 public class Obskewer
 {
-  static String titleText = "Obskewer";
-  static String version = "1.2.1, last updated June 13, 2014";
+  static String titleText = Misc.titleText;
+  static String version = "1.2.2, last updated June 15, 2014";
   static String changes = "- Added TrueCaesar cipher support\n"+
   "- Added Morse code cipher support\n"+
-  "Patch #1:\n- Fixed repeated messages of invalid characters in Morse code";
+  "Patch #1:\n- Fixed repeated messages of invalid characters in Morse code\n"+
+  "Patch #2:\n- Added Letter-Numbers cipher support\n";
 
   public static void main(String args[])
   {
+    boolean debug = false;
     String operation;
     while(true)
     {
+
+      if(debug == true)
+      {
+        Debug.setDefault();
+        debug = false;
+      }
+
       operation = JOptionPane.showInputDialog(null,"Operations: \'encode\',\'decode\',"+
       "\'info\',\'quit\'\nType your operation of choice: ","encode");
       if(operation.equals("encode"))
@@ -52,6 +67,11 @@ public class Obskewer
         //Commented out because it could close every other Java program
         //System.exit(0);
       }
+      else if(operation.equals("debug"))
+      {
+        Misc.alert("Debugging file ("+Debug.projectName+".properties) will be created if one doesn\'t exists already.\nDelete it to stop its effects on this program.","warning");
+        debug = true;
+      }
       else
       {
         JOptionPane.showMessageDialog(null,"That wasn\'t a valid operation.",titleText,JOptionPane.WARNING_MESSAGE);
@@ -61,7 +81,7 @@ public class Obskewer
   public static void doEncode()
   {
     String in = JOptionPane.showInputDialog(null,"Encoding to a Cipher...\n"+
-    "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'Morse\', \'(none)\'\nType your cipher type of choice: ",
+    "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'Morse\', \'Numbers\', \'(none)\'\nType your cipher type of choice: ",
     "TrueCaesar");
     if(in.equals("ClassicShift"))
     {
@@ -76,7 +96,15 @@ public class Obskewer
     {
       Morse.performEncode();
     }
+    else if(in.equals("Numbers"))
+    {
+      Numbers.performEncode();
+    }
     /*
+    else if(in.equals("OtherCipher"))
+    {
+      OtherCipher.performEncode();
+    }
     else if(in.equals("OtherCipher"))
     {
       OtherCipher.performEncode();
@@ -94,7 +122,7 @@ public class Obskewer
   public static void doDecode()
   {
     String in = JOptionPane.showInputDialog(null,"Decoding from a Cipher...\n"+
-    "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'Morse\', \'(none)\'\nType your cipher type of choice: ",
+    "Ciphers: \'ClassicShift\', \'TrueCaesar\', \'Morse\', \'Numbers\', \'(none)\'\nType your cipher type of choice: ",
     "TrueCaesar");
     if(in.equals("ClassicShift"))
     {
@@ -109,14 +137,22 @@ public class Obskewer
     {
       Morse.performDecode();
     }
+    else if(in.equals("Numbers"))
+    {
+      Numbers.performDecode();
+    }
     /*
     else if(in.equals("OtherCipher"))
     {
-      OtherCipher.performEncode();
+      OtherCipher.performDecode();
     }
     else if(in.equals("OtherCipher"))
     {
-      OtherCipher.performEncode();
+      OtherCipher.performDecode();
+    }
+    else if(in.equals("OtherCipher"))
+    {
+      OtherCipher.performDecode();
     }
     */
     else
