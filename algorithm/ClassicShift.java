@@ -4,16 +4,12 @@
 //  Java Source File
 //
 //  Created by Austin Jackson,
-//  Last modified on June 10, 2014.
-//
-//  Editted with Atom
-//  https://atom.io/
 //
 //  Further updates
 //  http://srchub.org/u/mac
 //
 
-package Algorithm;
+package com.ruthlessphysics.obskewer.algorithm;
 
 import javax.swing.*;
 
@@ -26,13 +22,13 @@ public class ClassicShift
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to encode: ","My secrets!");
     int key = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter a short-integer key: ","2"));
-    String out = JOptionPane.showInputDialog("Key (remember this!): \'"+key+"\'\nOriginal: \'"+in+"\'\nEncoded: ",encode(in,key));
+    JOptionPane.showInputDialog("Key (remember this!): \'"+key+"\'\nOriginal: \'"+in+"\'\nEncoded: ",encode(in,key));
   }
   public static void performDecode()
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to decode: ","O{\"ugetgvu#");
     int key = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter a short-integer key: ","2"));
-    String out = JOptionPane.showInputDialog("Input Key: \'"+key+"\'\nEncoded: \'"+in+"\'\nDecoded: ",decode(in,key));
+    JOptionPane.showInputDialog("Input Key: \'"+key+"\'\nEncoded: \'"+in+"\'\nDecoded: ",decode(in,key));
   }
   public static String encode(String a, int inc)
   {

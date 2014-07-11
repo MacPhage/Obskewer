@@ -4,16 +4,12 @@
 //  Java Source File
 //
 //  Created by Austin Jackson,
-//  Last modified on June 11, 2014.
-//
-//  Editted with Atom
-//  https://atom.io/
 //
 //  Further updates
 //  http://srchub.org/u/mac
 //
 
-package Algorithm;
+package com.ruthlessphysics.obskewer.algorithm;
 
 import javax.swing.*;
 
@@ -26,12 +22,12 @@ public class Morse
   public static void performEncode()
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to encode: ","Samuel Morse");
-    String out = JOptionPane.showInputDialog("Original: \'"+in+"\'\nEncoded: ",encode(in));
+    JOptionPane.showInputDialog("Original: \'"+in+"\'\nEncoded: ",encode(in));
   }
   public static void performDecode()
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to decode: ","... .- -- ..- . .-.. / -- --- .-. ... . ");
-    String out = JOptionPane.showInputDialog("Encoded: \'"+in+"\'\nDecoded: ",decode(in));
+    JOptionPane.showInputDialog("Encoded: \'"+in+"\'\nDecoded: ",decode(in));
   }
   public static String encode(String a)
   {

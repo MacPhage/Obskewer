@@ -4,30 +4,21 @@
 //  Java Source File
 //
 //  Created by Austin Jackson,
-//  Last modified on June 10, 2014.
-//
-//  Editted with Atom
-//  https://atom.io/
 //
 //  Further updates
 //  http://srchub.org/u/mac
 //
 
-import java.awt.*;
+package com.ruthlessphysics.obskewer;
+
 import javax.swing.*;
 
-import Algorithm.Misc;
-import Algorithm.Debug;
-
-import Algorithm.ClassicShift;
-import Algorithm.TrueCaesar;
-import Algorithm.Morse;
-import Algorithm.Numbers;
-
+import com.ruthlessphysics.util.Debug;
+import com.ruthlessphysics.obskewer.algorithm.*;
 
 public class Obskewer
 {
-  static String titleText = Misc.titleText;
+  public static String projectName = "Obskewer";
   static String version = "1.2.2, last updated June 15, 2014";
   static String changes = "- Added TrueCaesar cipher support\n"+
   "- Added Morse code cipher support\n"+
@@ -69,12 +60,12 @@ public class Obskewer
       }
       else if(operation.equals("debug"))
       {
-        Misc.alert("Debugging file ("+Debug.projectName+".properties) will be created if one doesn\'t exists already.\nDelete it to stop its effects on this program.","warning");
+        Debug.alert("Debugging file ("+projectName+".properties) will be created if one doesn\'t exists already.\nDelete it to stop its effects on this program.","warning");
         debug = true;
       }
       else
       {
-        JOptionPane.showMessageDialog(null,"That wasn\'t a valid operation.",titleText,JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(null,"That wasn\'t a valid operation.",projectName,JOptionPane.WARNING_MESSAGE);
       }
     }
   }
@@ -116,7 +107,7 @@ public class Obskewer
     */
     else
     {
-      JOptionPane.showMessageDialog(null,"That isn\'t a supported cipher.",titleText,JOptionPane.WARNING_MESSAGE);
+      JOptionPane.showMessageDialog(null,"That isn\'t a supported cipher.",projectName,JOptionPane.WARNING_MESSAGE);
     }
   }
   public static void doDecode()
@@ -157,7 +148,7 @@ public class Obskewer
     */
     else
     {
-      JOptionPane.showMessageDialog(null,"That isn\'t a supported cipher.",titleText,JOptionPane.WARNING_MESSAGE);
+      JOptionPane.showMessageDialog(null,"That isn\'t a supported cipher.",projectName,JOptionPane.WARNING_MESSAGE);
     }
   }
   public static void showInfo()

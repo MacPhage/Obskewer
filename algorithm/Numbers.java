@@ -4,20 +4,16 @@
 //  Java Source File
 //
 //  Created by Austin Jackson,
-//  Last modified on June 11, 2014.
-//
-//  Editted with Atom
-//  https://atom.io/
 //
 //  Further updates
 //  http://srchub.org/u/mac
 //
 
-package Algorithm;
+package com.ruthlessphysics.obskewer.algorithm;
+
+import com.ruthlessphysics.util.Debug;
 
 import javax.swing.*;
-import java.util.*;
-import java.lang.*;
 
 public class Numbers
 {
@@ -30,12 +26,12 @@ public class Numbers
   public static void performEncode()
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to encode: ","Numbers are fun.");
-    String out = JOptionPane.showInputDialog("Original: \'"+in+"\'\nEncoded: ",encode(in));
+    JOptionPane.showInputDialog("Original: \'"+in+"\'\nEncoded: ",encode(in));
   }
   public static void performDecode()
   {
     String in = JOptionPane.showInputDialog(null,"Enter something to decode: ","030120 041507");
-    String out = JOptionPane.showInputDialog("Encoded: \'"+in+"\'\n\t(Invalid characters removed.)\nDecoded: ",decode(in));
+    JOptionPane.showInputDialog("Encoded: \'"+in+"\'\n\t(Invalid characters removed.)\nDecoded: ",decode(in));
   }
   public static String encode(String a) //Custom parameters
   {
@@ -79,7 +75,7 @@ public class Numbers
     }
     if(e > 0)
     {
-      Misc.alert(e+" character(s) were unrecognized. \n"+
+      Debug.alert(e+" character(s) were unrecognized. \n"+
       "Only alphabetic characters are designed to work with this cipher, "+
       "but any other characters have been kept.\n\n"+
       "Be advised, when decoding this cipher, the invalid characters will be removed.","warning");
@@ -91,7 +87,7 @@ public class Numbers
     a = a.replaceAll("[^\\s^0-9]","");
     String r = ""; //End result
     String[] s = a.split(" "); //Splits Number phrase into words, by index
-    char temp1,temp2,temp3;
+    char temp1,temp2;
     String c; //Variable to store picked out dual-chars (String Numbers like "01" and "13")
     int p; //dual-chars converted into Integer value, used to find the placement in the alphabet
     int e = 0; //Unrecognized "letter" counter
@@ -129,7 +125,7 @@ public class Numbers
     }
     if(e > 0)
     {
-      Misc.alert(e+" number \"letters\" were unrecognized. \n"+
+      Debug.alert(e+" number \"letters\" were unrecognized. \n"+
       "They are kept as is in number form. Also, this cipher doesn\'t support punctuation.","warning");
     }
     return r;
