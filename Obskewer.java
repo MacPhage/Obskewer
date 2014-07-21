@@ -58,6 +58,10 @@ public class Obskewer
         //Commented out because it could close every other Java program
         //System.exit(0);
       }
+      else if(operation.equals("kill"))
+      {
+        System.exit(0);
+      }
       else if(operation.equals("debug"))
       {
         Debug.alert("Debugging file ("+projectName+".properties) will be created if one doesn\'t exists already.\nDelete it to stop its effects on this program.","warning");
