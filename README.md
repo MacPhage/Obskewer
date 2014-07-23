@@ -12,7 +12,7 @@ Supported Ciphers:
 <li>"Skip" (or a form of Scytale) (<a href="http://rumkin.com/tools/cipher/skip.php">better described here</a>)(coming soon)</li>
 </ul>
 
-To use, obtain the JAR file on the Downloads tab and run it like any program (typically, you double-click on it). To quit the program, type "quit" when prompted.
+To use, obtain the JAR file on the Releases tab and run it like any program (typically, you double-click on it). To quit the program, type "quit" when prompted.
 
 This program works better with UTF-8, obviously.
 
@@ -22,6 +22,4 @@ This program works better with UTF-8, obviously.
 <ul>
 <li><a href="http://rumkin.com/tools/cipher/">http://rumkin.com/tools/cipher/</a></li>
 <li><a href="http://rosettacode.org/wiki/Caesar_cipher#Java">http://rosettacode.org/wiki/Caesar_cipher#Java</a></li>
-<li><a href="url">url</a></li>
-<li><a href="url">url</a></li>
 </ul>
