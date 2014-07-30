@@ -14,6 +14,7 @@ package com.ruthlessphysics.obskewer;
 import javax.swing.*;
 
 import com.ruthlessphysics.util.Debug;
+import com.ruthlessphysics.util.Config;
 import com.ruthlessphysics.obskewer.algorithm.*;
 
 public class Obskewer
@@ -25,6 +26,8 @@ public class Obskewer
   "Patch #1:\n- Fixed repeated messages of invalid characters in Morse code\n"+
   "Patch #2:\n- Added Letter-Numbers cipher support\n";
 
+  public static Config config = new Config("Obskewer");
+  
   public static void main(String args[])
   {
     boolean debug = false;
@@ -34,7 +37,7 @@ public class Obskewer
 
       if(debug == true)
       {
-        Debug.setDefault();
+        config.getConfig();
         debug = false;
       }
 

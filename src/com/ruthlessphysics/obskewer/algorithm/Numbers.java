@@ -11,6 +11,7 @@
 
 package com.ruthlessphysics.obskewer.algorithm;
 
+import com.ruthlessphysics.obskewer.Obskewer;
 import com.ruthlessphysics.util.Debug;
 
 import javax.swing.*;
@@ -118,9 +119,9 @@ public class Numbers
     catch (Exception error)
     {
       error.printStackTrace();
-      if(Debug.displayDebug())
+      if(Debug.alertDebugErrors(Obskewer.config))
       {
-        JOptionPane.showMessageDialog(null,error.getStackTrace(),"Obskewer Error",JOptionPane.ERROR_MESSAGE);
+        Debug.displayError(error);
       }
     }
     if(e > 0)
