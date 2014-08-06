@@ -6,7 +6,7 @@
 //  Created by Austin Jackson,
 //
 //  Further updates
-//  http://srchub.org/u/mac
+//  http://github.com/MacPhage
 //
 
 package com.ruthlessphysics.obskewer.algorithm;
@@ -118,10 +118,7 @@ public class Numbers
     catch (Exception error)
     {
       error.printStackTrace();
-      if(Debug.displayDebug())
-      {
-        JOptionPane.showMessageDialog(null,error.getStackTrace(),"Obskewer Error",JOptionPane.ERROR_MESSAGE);
-      }
+      JOptionPane.showMessageDialog(null,error.getStackTrace(),"Obskewer Error",JOptionPane.ERROR_MESSAGE);
     }
     if(e > 0)
     {

@@ -6,7 +6,7 @@
 //  Created by Austin Jackson,
 //
 //  Further updates
-//  http://srchub.org/u/mac
+//  http://github.com/MacPhage
 //
 
 package com.ruthlessphysics.obskewer.algorithm;
