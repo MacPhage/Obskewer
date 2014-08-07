@@ -23,3 +23,6 @@ This program works better with UTF-8, obviously.
 <li><a href="http://rumkin.com/tools/cipher/">http://rumkin.com/tools/cipher/</a></li>
 <li><a href="http://rosettacode.org/wiki/Caesar_cipher#Java">http://rosettacode.org/wiki/Caesar_cipher#Java</a></li>
 </ul>
+
+
+Look I changed the README!
