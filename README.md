@@ -1,4 +1,4 @@
-<img src="http://ruthlessphysics.com/img/obskewerlogo.png" width="600" height="200">
+<img src="http://macphage.github.io/img/obskewerlogo.png" width="600" height="200">
 
 <h2>What is Obskewer?</h2>
 Obskewer is a light-weight Java application for encoding and decoding text using common ciphers.
