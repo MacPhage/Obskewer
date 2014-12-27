@@ -21,6 +21,7 @@ body {
     background: -ms-linear-gradient(top, @background-top, @background-bottom);
     /* Opera 11.10+ */
     background: -o-linear-gradient(top, @background-top, @background-bottom);
+    background-attachment: fixed;
 
 
 
@@ -43,7 +44,7 @@ body {
         height: 384px;
         -webkit-filter: blur(20px);
     }
-    
+
     @media(min-width:769px){
         #background-clip {
             position: fixed;
@@ -83,9 +84,9 @@ body {
         }
 
         .content {
-            
+
             //Markdown stuff
-            
+
             * {
                 font-family: "Arimo", @native-font;
                 font-size: 1.1em;
@@ -170,21 +171,57 @@ body {
             p * {
                 font-size: 1.0em;
             }
+        }
+    }
 
-            p .signature {
-                font-family: "Nothing You Could Do", @native-font;
-                font-size: 1.5em;
+    .footer {
+        display: block;
+        width: 100vw;
+        height: 100px;
+        margin-top: 25px;
+        background: rgba(255,255,255,0.5);
 
-                a img {
+        .wrap {
+            display: table;
+            height: 100px;
+            width: 100vw;
+
+            .box {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+
+                @media(max-width:415px){
+                    .ob-button {
+                        font-size: 1.0em!important;
+                    }
+                }
+
+
+                .ob-button {
                     display: inline-block;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    border-radius: 20px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    background: linear-gradient(rgb(252, 252, 252), rgb(237, 237, 237));
+                    -webkit-filter: drop-shadow(0px 1px 1px rgba(50, 50, 50, 0.85));
+
+                    color: rgb(50,50,50);
+                    font-size: 1.25em;
+
+                    &:active {
+                        background: linear-gradient(rgb(203, 219, 235), rgb(230, 243, 255));
+                        -webkit-filter: drop-shadow(0px 1px 1px rgba(50, 50, 50, 0.45));
+                    }
                 }
 
             }
 
         }
 
-
     }
-
-
 }
