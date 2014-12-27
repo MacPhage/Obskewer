@@ -1,0 +1,100 @@
+@import url(http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic|Merriweather:300,400);
+
+@native-font: "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+@transparent: rgba(0,0,0,0.0);
+@background-top: rgb(85, 85, 85);
+@background-bottom: rgb(0, 0, 0);
+
+body {
+
+    width: 100vw;
+    height: 100vh;
+
+    font-family: @native-font;
+    color: rgb(240, 240, 240);
+    font-size: 12pt;
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, @background-top, @background-bottom);
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, @background-top, @background-bottom);
+    /* IE 10 */
+    background: -ms-linear-gradient(top, @background-top, @background-bottom);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, @background-top, @background-bottom);
+
+
+
+
+    .bar {
+        height: 4px;
+        background-color: #f2f2f2;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #background-clip {
+        position: fixed;
+        bottom: -96px;
+        right: -96px;
+        z-index: -1;
+        background: url("../img/obskewer_384.png");
+        opacity: 0.5;
+        width: 384px;
+        height: 384px;
+        -webkit-filter: blur(20px);
+    }
+    
+    @media(min-width:769px){
+        #background-clip {
+            position: fixed;
+            bottom: -128px;
+            right: -128px;
+            z-index: -1;
+            background: url("../img/obskewer_512.png");
+            opacity: 0.5;
+            width: 512px;
+            height: 512px;
+            -webkit-filter: blur(20px);
+        }
+    }
+
+    .main-container {
+        padding: 15px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+        text-shadow: 1px 1px 3px rgb(31, 31, 31);
+
+        .header {
+
+            .hero {
+                text-align: left;
+
+                .title {
+                    font-family: "Merriweather", @native-font;
+                    font-size: 3em;
+
+                }
+
+            }
+
+        }
+
+        .content {
+            
+            font-family: "Arimo", @native-font;
+            
+            //Markdown stuff
+            
+            h3 {
+                m
+            }
+
+        }
+
+
+    }
+
+
+}
