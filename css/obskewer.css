@@ -24,8 +24,8 @@ body .bar {
 }
 body #background-clip {
   position: absolute;
-  bottom: -96px;
-  right: -96px;
+  bottom: 5px;
+  right: 5px;
   z-index: -1;
   background: url("../img/obskewer_384.png");
   opacity: 0.5;
