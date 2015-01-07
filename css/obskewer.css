@@ -23,7 +23,7 @@ body .bar {
   margin-bottom: 25px;
 }
 body #background-clip {
-  position: fixed;
+  position: absolute;
   bottom: -96px;
   right: -96px;
   z-index: -1;
