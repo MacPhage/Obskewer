@@ -15,6 +15,7 @@ body {
   /* Opera 11.10+ */
   background: -o-linear-gradient(top, #555555, #000000);
   background-attachment: fixed;
+  overflow: hidden;
 }
 body .bar {
   height: 4px;
